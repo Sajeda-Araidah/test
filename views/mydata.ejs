@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('layout/head.ejs')%>
+</head>
+<body>
+    <header>
+        <%- include('layout/header.ejs')%>
+    </header>
+    <main>
+        <% collection.forEach( element => {%>
+           
+           <h1><%= element.name%></h1>
+           <a href="/details/<%= element.id%>"><img src="<%= element.img%>" alt="" srcset=""></a>
+           
+          
+
+    
+        <% })%>
+    </main>
+    <footer>
+        <%- include('layout/footer.ejs')%>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include ('layout/head.ejs')%>
+</head>
+<body>
+  <header>
+    <%- include('layout/header.ejs')%>
+  </header>
+  <main>
+<% toto.forEach(element =>  {%>
+    <div>
+<form action="/" method="POST">
+    <input type="hidden" value="<%= element.name%>" name="one">  
+<h1><%= element.name%></h1>
+<input type="hidden" value="<%= element.img%>" name="two">
+<img src="<%= element.img%>" alt="" srcset="">
+<input type="hidden" value="<%= element.level%>" name="three">
+<p> <%= element.level%></p>
+<button type="submit">Save Digion</button>
+</div>
+
+</form>
+<% })%>
+
+
+
+  </main>
+  <footer>
+    <%- include('layout/footer.ejs')%>
+  </footer>
+</body>
+</html>
